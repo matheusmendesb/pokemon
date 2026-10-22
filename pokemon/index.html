@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Comentários</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<header>
+    <h1>Pokédex Comentários</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#cadastro">Cadastrar</a>
+        <a href="#lista">Comentários</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Buscar Pokémon</h2>
+        <input type="text" id="pokemonInput" placeholder="Digite o Pokémon">
+        <button id="btnBuscar" type="button">Buscar</button>
+        <div id="resultado" aria-live="polite"></div>
+    </section>
+
+    <section id="cadastro">
+        <h2>Adicionar Comentário</h2>
+        <form id="formComentario">
+            <label for="pokemon">Nome do Pokémon</label>
+            <input type="text" id="pokemon" name="pokemon" required>
+
+            <label for="nota">Nota</label>
+            <input type="number" id="nota" name="nota" min="0" max="10" step="0.1" required>
+
+            <label for="comentario">Comentário</label>
+            <textarea id="comentario" name="comentario" required></textarea>
+
+            <button type="submit">Salvar</button>
+        </form>
+        <p id="mensagemFormulario" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="lista">
+        <h2>Lista de Comentários</h2>
+        <div id="dados" aria-live="polite">Carregando comentários...</div>
+    </section>
+</main>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
